@@ -1,0 +1,630 @@
+{
+  "version": 1,
+  "parametros": [
+    {
+      "codigo": "creatinina_serica",
+      "nombre_i18n": { "es": "Creatinina sérica", "en": "Serum creatinine", "fr": "Créatinine sérique" },
+      "categoria": "quimica",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "umol/L", "factor_a_canonica": 0.0113122, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.2, "max": 20.0 },
+      "decimales": 2
+    },
+    {
+      "codigo": "urea_serica",
+      "nombre_i18n": { "es": "Urea sérica", "en": "Serum urea", "fr": "Urée sérique" },
+      "categoria": "quimica",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 6.006, "offset": 0.0 },
+        { "unidad": "BUN_mg/dL", "factor_a_canonica": 2.1429, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 5.0, "max": 400.0 },
+      "decimales": 1,
+      "nota": "BUN_mg/dL × 2.1429 = urea_mg/dL (porque urea_mg/dL = BUN_mg/dL × 60/28 = BUN × 2.1429)"
+    },
+    {
+      "codigo": "bun",
+      "nombre_i18n": { "es": "Nitrógeno ureico (BUN)", "en": "Blood Urea Nitrogen (BUN)", "fr": "Azote uréique (BUN)" },
+      "categoria": "quimica",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 2.8011, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 2.0, "max": 180.0 },
+      "decimales": 1,
+      "nota": "BUN (mg/dL) = urea_mg/dL / 2.1429. Almacenado como BUN en canónico."
+    },
+    {
+      "codigo": "glicemia",
+      "nombre_i18n": { "es": "Glicemia", "en": "Blood glucose", "fr": "Glycémie" },
+      "categoria": "quimica",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 18.018, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 40.0, "max": 600.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "sodio",
+      "nombre_i18n": { "es": "Sodio sérico", "en": "Serum sodium", "fr": "Sodium sérique" },
+      "categoria": "electrolitos",
+      "unidad_canonica": "mEq/L",
+      "unidades_aceptadas": [
+        { "unidad": "mEq/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 110.0, "max": 175.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "potasio",
+      "nombre_i18n": { "es": "Potasio sérico", "en": "Serum potassium", "fr": "Potassium sérique" },
+      "categoria": "electrolitos",
+      "unidad_canonica": "mEq/L",
+      "unidades_aceptadas": [
+        { "unidad": "mEq/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 2.0, "max": 8.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "cloro",
+      "nombre_i18n": { "es": "Cloro sérico", "en": "Serum chloride", "fr": "Chlorure sérique" },
+      "categoria": "electrolitos",
+      "unidad_canonica": "mEq/L",
+      "unidades_aceptadas": [
+        { "unidad": "mEq/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 80.0, "max": 130.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "calcio_total",
+      "nombre_i18n": { "es": "Calcio total", "en": "Total calcium", "fr": "Calcium total" },
+      "categoria": "electrolitos",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 4.008, "offset": 0.0 },
+        { "unidad": "mEq/L", "factor_a_canonica": 2.004, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 5.0, "max": 14.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "magnesio",
+      "nombre_i18n": { "es": "Magnesio sérico", "en": "Serum magnesium", "fr": "Magnésium sérique" },
+      "categoria": "electrolitos",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 2.4305, "offset": 0.0 },
+        { "unidad": "mEq/L", "factor_a_canonica": 1.2153, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.5, "max": 5.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "fosforo",
+      "nombre_i18n": { "es": "Fósforo sérico", "en": "Serum phosphorus", "fr": "Phosphore sérique" },
+      "categoria": "electrolitos",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 3.0974, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.5, "max": 10.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "albumina",
+      "nombre_i18n": { "es": "Albúmina sérica", "en": "Serum albumin", "fr": "Albumine sérique" },
+      "categoria": "proteinas",
+      "unidad_canonica": "g/dL",
+      "unidades_aceptadas": [
+        { "unidad": "g/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "g/L", "factor_a_canonica": 0.1, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 1.0, "max": 6.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "proteinas_totales",
+      "nombre_i18n": { "es": "Proteínas totales", "en": "Total protein", "fr": "Protéines totales" },
+      "categoria": "proteinas",
+      "unidad_canonica": "g/dL",
+      "unidades_aceptadas": [
+        { "unidad": "g/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "g/L", "factor_a_canonica": 0.1, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 3.0, "max": 10.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "acido_urico",
+      "nombre_i18n": { "es": "Ácido úrico", "en": "Uric acid", "fr": "Acide urique" },
+      "categoria": "quimica",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "umol/L", "factor_a_canonica": 0.016807, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 1.0, "max": 20.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "pao2",
+      "nombre_i18n": { "es": "PaO₂", "en": "PaO₂", "fr": "PaO₂" },
+      "categoria": "gasometria",
+      "unidad_canonica": "mmHg",
+      "unidades_aceptadas": [
+        { "unidad": "mmHg", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "kPa", "factor_a_canonica": 7.50062, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 20.0, "max": 700.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "paco2",
+      "nombre_i18n": { "es": "PaCO₂", "en": "PaCO₂", "fr": "PaCO₂" },
+      "categoria": "gasometria",
+      "unidad_canonica": "mmHg",
+      "unidades_aceptadas": [
+        { "unidad": "mmHg", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "kPa", "factor_a_canonica": 7.50062, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 10.0, "max": 100.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "ph_arterial",
+      "nombre_i18n": { "es": "pH arterial", "en": "Arterial pH", "fr": "pH artériel" },
+      "categoria": "gasometria",
+      "unidad_canonica": "pH",
+      "unidades_aceptadas": [
+        { "unidad": "pH", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 6.8, "max": 7.8 },
+      "decimales": 2
+    },
+    {
+      "codigo": "hco3",
+      "nombre_i18n": { "es": "HCO₃⁻", "en": "HCO₃⁻", "fr": "HCO₃⁻" },
+      "categoria": "gasometria",
+      "unidad_canonica": "mEq/L",
+      "unidades_aceptadas": [
+        { "unidad": "mEq/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 5.0, "max": 50.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "exceso_base",
+      "nombre_i18n": { "es": "Exceso de base (BE)", "en": "Base excess (BE)", "fr": "Excès de base (BE)" },
+      "categoria": "gasometria",
+      "unidad_canonica": "mEq/L",
+      "unidades_aceptadas": [
+        { "unidad": "mEq/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": -30.0, "max": 30.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "lactato",
+      "nombre_i18n": { "es": "Lactato", "en": "Lactate", "fr": "Lactate" },
+      "categoria": "gasometria",
+      "unidad_canonica": "mmol/L",
+      "unidades_aceptadas": [
+        { "unidad": "mmol/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mg/dL", "factor_a_canonica": 0.111, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.3, "max": 25.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "sato2",
+      "nombre_i18n": { "es": "SatO₂ arterial", "en": "Arterial SatO₂", "fr": "SatO₂ artérielle" },
+      "categoria": "gasometria",
+      "unidad_canonica": "%",
+      "unidades_aceptadas": [
+        { "unidad": "%", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 40.0, "max": 100.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "hemoglobina",
+      "nombre_i18n": { "es": "Hemoglobina", "en": "Hemoglobin", "fr": "Hémoglobine" },
+      "categoria": "hemograma",
+      "unidad_canonica": "g/dL",
+      "unidades_aceptadas": [
+        { "unidad": "g/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "g/L", "factor_a_canonica": 0.1, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 1.6113, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 3.0, "max": 22.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "hematocrito",
+      "nombre_i18n": { "es": "Hematocrito", "en": "Hematocrit", "fr": "Hématocrite" },
+      "categoria": "hemograma",
+      "unidad_canonica": "%",
+      "unidades_aceptadas": [
+        { "unidad": "%", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "L/L", "factor_a_canonica": 100.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 10.0, "max": 65.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "leucocitos",
+      "nombre_i18n": { "es": "Leucocitos", "en": "White blood cells", "fr": "Leucocytes" },
+      "categoria": "hemograma",
+      "unidad_canonica": "10^3/uL",
+      "unidades_aceptadas": [
+        { "unidad": "10^3/uL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "10^9/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "/uL", "factor_a_canonica": 0.001, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.1, "max": 100.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "plaquetas",
+      "nombre_i18n": { "es": "Plaquetas", "en": "Platelets", "fr": "Plaquettes" },
+      "categoria": "hemograma",
+      "unidad_canonica": "10^3/uL",
+      "unidades_aceptadas": [
+        { "unidad": "10^3/uL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "10^9/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "/uL", "factor_a_canonica": 0.001, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 1.0, "max": 1500.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "bilirrubina_total",
+      "nombre_i18n": { "es": "Bilirrubina total", "en": "Total bilirubin", "fr": "Bilirubine totale" },
+      "categoria": "hepatico",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "umol/L", "factor_a_canonica": 0.0585, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.1, "max": 30.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "bilirrubina_directa",
+      "nombre_i18n": { "es": "Bilirrubina directa", "en": "Direct bilirubin", "fr": "Bilirubine directe" },
+      "categoria": "hepatico",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "umol/L", "factor_a_canonica": 0.0585, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 20.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "alt",
+      "nombre_i18n": { "es": "ALT (TGP)", "en": "ALT (GPT)", "fr": "ALT (TGP)" },
+      "categoria": "hepatico",
+      "unidad_canonica": "U/L",
+      "unidades_aceptadas": [
+        { "unidad": "U/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 5000.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "ast",
+      "nombre_i18n": { "es": "AST (TGO)", "en": "AST (GOT)", "fr": "AST (TGO)" },
+      "categoria": "hepatico",
+      "unidad_canonica": "U/L",
+      "unidades_aceptadas": [
+        { "unidad": "U/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 5000.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "troponina_i",
+      "nombre_i18n": { "es": "Troponina I", "en": "Troponin I", "fr": "Troponine I" },
+      "categoria": "cardiaco",
+      "unidad_canonica": "ng/mL",
+      "unidades_aceptadas": [
+        { "unidad": "ng/mL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "ug/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "ng/L", "factor_a_canonica": 0.001, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 100.0 },
+      "decimales": 3
+    },
+    {
+      "codigo": "ck_mb",
+      "nombre_i18n": { "es": "CK-MB", "en": "CK-MB", "fr": "CK-MB" },
+      "categoria": "cardiaco",
+      "unidad_canonica": "U/L",
+      "unidades_aceptadas": [
+        { "unidad": "U/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "ng/mL", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 500.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "bnp",
+      "nombre_i18n": { "es": "BNP", "en": "BNP", "fr": "BNP" },
+      "categoria": "cardiaco",
+      "unidad_canonica": "pg/mL",
+      "unidades_aceptadas": [
+        { "unidad": "pg/mL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "ng/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 50000.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "nt_probnp",
+      "nombre_i18n": { "es": "NT-proBNP", "en": "NT-proBNP", "fr": "NT-proBNP" },
+      "categoria": "cardiaco",
+      "unidad_canonica": "pg/mL",
+      "unidades_aceptadas": [
+        { "unidad": "pg/mL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "ng/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 100000.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "pcr",
+      "nombre_i18n": { "es": "Proteína C reactiva (PCR)", "en": "C-reactive protein (CRP)", "fr": "Protéine C réactive (CRP)" },
+      "categoria": "inflamacion",
+      "unidad_canonica": "mg/L",
+      "unidades_aceptadas": [
+        { "unidad": "mg/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mg/dL", "factor_a_canonica": 10.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 500.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "procalcitonina",
+      "nombre_i18n": { "es": "Procalcitonina", "en": "Procalcitonin", "fr": "Procalcitonine" },
+      "categoria": "inflamacion",
+      "unidad_canonica": "ng/mL",
+      "unidades_aceptadas": [
+        { "unidad": "ng/mL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "ug/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 1000.0 },
+      "decimales": 2
+    },
+    {
+      "codigo": "tp",
+      "nombre_i18n": { "es": "Tiempo de protrombina (TP)", "en": "Prothrombin time (PT)", "fr": "Temps de prothrombine (TP)" },
+      "categoria": "coagulacion",
+      "unidad_canonica": "s",
+      "unidades_aceptadas": [
+        { "unidad": "s", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 5.0, "max": 120.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "inr",
+      "nombre_i18n": { "es": "INR", "en": "INR", "fr": "INR" },
+      "categoria": "coagulacion",
+      "unidad_canonica": "ratio",
+      "unidades_aceptadas": [
+        { "unidad": "ratio", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.5, "max": 20.0 },
+      "decimales": 2
+    },
+    {
+      "codigo": "tttp",
+      "nombre_i18n": { "es": "Tiempo de tromboplastina parcial (TTP)", "en": "Partial thromboplastin time (PTT)", "fr": "Temps de thromboplastine partielle (TTP)" },
+      "categoria": "coagulacion",
+      "unidad_canonica": "s",
+      "unidades_aceptadas": [
+        { "unidad": "s", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 10.0, "max": 200.0 },
+      "decimales": 1
+    },
+    {
+      "codigo": "fibrinogeno",
+      "nombre_i18n": { "es": "Fibrinógeno", "en": "Fibrinogen", "fr": "Fibrinogène" },
+      "categoria": "coagulacion",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "g/L", "factor_a_canonica": 100.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 50.0, "max": 1000.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "sodio_orina",
+      "nombre_i18n": { "es": "Sodio en orina", "en": "Urine sodium", "fr": "Sodium urinaire" },
+      "categoria": "electrolitos_orina",
+      "unidad_canonica": "mEq/L",
+      "unidades_aceptadas": [
+        { "unidad": "mEq/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 300.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "potasio_orina",
+      "nombre_i18n": { "es": "Potasio en orina", "en": "Urine potassium", "fr": "Potassium urinaire" },
+      "categoria": "electrolitos_orina",
+      "unidad_canonica": "mEq/L",
+      "unidades_aceptadas": [
+        { "unidad": "mEq/L", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 200.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "creatinina_orina",
+      "nombre_i18n": { "es": "Creatinina en orina", "en": "Urine creatinine", "fr": "Créatinine urinaire" },
+      "categoria": "electrolitos_orina",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "umol/L", "factor_a_canonica": 0.0113122, "offset": 0.0 },
+        { "unidad": "mg/L", "factor_a_canonica": 0.1, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 500.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "urea_orina",
+      "nombre_i18n": { "es": "Urea en orina", "en": "Urine urea", "fr": "Urée urinaire" },
+      "categoria": "electrolitos_orina",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 6.006, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 5000.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "colesterol_total",
+      "nombre_i18n": { "es": "Colesterol total", "en": "Total cholesterol", "fr": "Cholestérol total" },
+      "categoria": "lipidico",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 38.67, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 50.0, "max": 500.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "ldl",
+      "nombre_i18n": { "es": "LDL colesterol", "en": "LDL cholesterol", "fr": "Cholestérol LDL" },
+      "categoria": "lipidico",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 38.67, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 20.0, "max": 400.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "hdl",
+      "nombre_i18n": { "es": "HDL colesterol", "en": "HDL cholesterol", "fr": "Cholestérol HDL" },
+      "categoria": "lipidico",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 38.67, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 10.0, "max": 150.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "trigliceridos",
+      "nombre_i18n": { "es": "Triglicéridos", "en": "Triglycerides", "fr": "Triglycérides" },
+      "categoria": "lipidico",
+      "unidad_canonica": "mg/dL",
+      "unidades_aceptadas": [
+        { "unidad": "mg/dL", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mmol/L", "factor_a_canonica": 88.57, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 20.0, "max": 5000.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "fio2",
+      "nombre_i18n": { "es": "FiO₂", "en": "FiO₂", "fr": "FiO₂" },
+      "categoria": "ventilacion",
+      "unidad_canonica": "fraccion",
+      "unidades_aceptadas": [
+        { "unidad": "fraccion", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "%", "factor_a_canonica": 0.01, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.21, "max": 1.0 },
+      "decimales": 2
+    },
+    {
+      "codigo": "diuresis",
+      "nombre_i18n": { "es": "Diuresis", "en": "Urine output", "fr": "Diurèse" },
+      "categoria": "hemodinamia",
+      "unidad_canonica": "mL/h",
+      "unidades_aceptadas": [
+        { "unidad": "mL/h", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "mL/24h", "factor_a_canonica": 0.04167, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 0.0, "max": 1000.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "presion_arterial_sistolica",
+      "nombre_i18n": { "es": "Presión arterial sistólica", "en": "Systolic blood pressure", "fr": "Pression artérielle systolique" },
+      "categoria": "signos_vitales",
+      "unidad_canonica": "mmHg",
+      "unidades_aceptadas": [
+        { "unidad": "mmHg", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 40.0, "max": 260.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "presion_arterial_diastolica",
+      "nombre_i18n": { "es": "Presión arterial diastólica", "en": "Diastolic blood pressure", "fr": "Pression artérielle diastolique" },
+      "categoria": "signos_vitales",
+      "unidad_canonica": "mmHg",
+      "unidades_aceptadas": [
+        { "unidad": "mmHg", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 20.0, "max": 160.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "frecuencia_cardiaca",
+      "nombre_i18n": { "es": "Frecuencia cardíaca", "en": "Heart rate", "fr": "Fréquence cardiaque" },
+      "categoria": "signos_vitales",
+      "unidad_canonica": "lpm",
+      "unidades_aceptadas": [
+        { "unidad": "lpm", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "bpm", "factor_a_canonica": 1.0, "offset": 0.0 }
+      ],
+      "rango_fisiologico": { "min": 20.0, "max": 300.0 },
+      "decimales": 0
+    },
+    {
+      "codigo": "temperatura",
+      "nombre_i18n": { "es": "Temperatura", "en": "Temperature", "fr": "Température" },
+      "categoria": "signos_vitales",
+      "unidad_canonica": "°C",
+      "unidades_aceptadas": [
+        { "unidad": "°C", "factor_a_canonica": 1.0, "offset": 0.0 },
+        { "unidad": "°F", "factor_a_canonica": 0.5556, "offset": -17.778 }
+      ],
+      "rango_fisiologico": { "min": 32.0, "max": 44.0 },
+      "decimales": 1
+    }
+  ]
+}

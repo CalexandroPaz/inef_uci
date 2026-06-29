@@ -1,0 +1,73 @@
+name: inef_uci
+description: INEF UCI — Gestión de historias clínicas para Cuidados Críticos y Nefrología. Instituto de Nefrología Dr. Abelardo Buch López.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Base de datos cifrada (Drift + SQLCipher)
+  drift: ^2.23.1
+  drift_flutter: ^0.2.4
+  sqlcipher_flutter_libs: any
+  sqlite3: ^2.5.4
+
+  # Estado
+  flutter_riverpod: ^2.6.1
+
+  # Navegación
+  go_router: ^14.3.0
+
+  # Seguridad
+  local_auth: ^2.3.0
+  flutter_secure_storage: ^9.2.2
+  crypto: ^3.0.6
+
+  # Cifrado AES para exportación
+  pointycastle: ^3.9.1
+
+  # PDF y exportación
+  pdf: ^3.11.1
+  printing: ^5.13.2
+  share_plus: ^10.1.2
+  file_picker: ^8.1.2
+
+  # UI
+  flutter_svg: ^2.0.10
+  fl_chart: ^0.70.2
+
+  # Preferencias e internacionalización
+  shared_preferences: ^2.3.2
+  intl: any
+
+  # Modelos (freezed + json)
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Utilidades
+  path: ^1.9.0
+  path_provider: ^2.1.4
+  uuid: ^4.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  drift_dev: ^2.23.1
+  build_runner: ^2.4.13
+  freezed: ^2.5.7
+  json_serializable: ^6.8.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/branding/
+    - assets/data/
